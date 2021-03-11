@@ -12,6 +12,7 @@ Follows the steps for start using Askdata.
 * **Select Workspace:** Switch to the Pi Day workspace.
 * **Check current Workspace:** Check your workspace is the one provided for Pi Day 2021.
 * **Ask data:** Use Natural language queries for getting data.
+* **Sample queries:** Explore datasets starting from some sample queries
 
 
 ## SignUp
@@ -38,7 +39,7 @@ curl --location --request POST 'https://api.askdata.com/security/domain/askdata/
 :warning: **If you don't Askdata password or your regisrterd using Social login**: You must reset the password and request a new one!
 
 Response: <br />
-```yaml
+```json
 {
     "access_token": "{{token}}",
     "token_type": "bearer",
@@ -61,7 +62,7 @@ curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/worksp
 ```
 
 Response: <br />
-```yaml
+```json
 {
     "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
     "domain": "d45834e9-7642-4011-9869-f942faa79e9b",
@@ -91,7 +92,6 @@ Response: <br />
 ```
 
 ## Check current Workspace
-Use this api for checking the correctness of the workspace. Include your user token.
 Request: <br />
 ```bash
 curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspace/current' \
@@ -101,7 +101,7 @@ curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspa
 ```
 
 Response: <br />
-```yaml
+```json
 {
     "agent": {
         "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
@@ -135,8 +135,6 @@ Response: <br />
 The referring workspace link is https://askdata.com/pi_day
   
 ## Ask data 
-Use this api for getting data. **nl** is the parameter for sending the message; **language** is the language for sending the request. Available languages are **it** and **en**. Include your user token.
-
 Request: <br />
 ```bash
 curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
@@ -146,7 +144,7 @@ curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/res
 ```
 
 Response (Sample): <br />
-```yaml
+```json
 {
     "id": null,
     "dataset": {
@@ -454,3 +452,13 @@ Response (Sample): <br />
     "queryId": "q1"
 }
 ```
+## Sample queries
+
+ - Nuovi positivi per regione 
+ - Ingressi in terapia intensiva per regione
+ - Variazione dimessi per regione
+ - Nuovi positivi su tamponi fatti per regione 
+ - Total cases by county 
+ - Total cases by state 
+ - Total deaths by country as map
+
