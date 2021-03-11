@@ -10,6 +10,7 @@ Follows the steps for start using Askdata.
 * **SignUp:** Register to [Askdata](https://app.askdata.com/login) with your own email WARN -> Do not use the Social Login with Google/Slack.
 * **Login to Askdata using REST API:** Get the token that will be used for all the other APIs
 * **Select Workspace:** Switch to the Pi Day workspace.
+* **Check current Workspace:** Check your workspace is the one provided for Pi Day 2021.
 
 
 ## SignUp / Social Login 
@@ -38,7 +39,7 @@ After signing-up you will receive an email with the link for confirming your reg
 
 ## Select Workspace "pi_day" 
 Use the API for switching workspace. Include your user token. <br />
-`curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/agent/switch' \
+`curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/workspace/switch' \
 --header 'Authorization: Bearer {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -73,8 +74,8 @@ You should get a response like
     "slug": "pi_day"
 }`
 
-## Check current agent
-curl --location --request GET 'http://localhost:8082/askdata/agent/current' \
+## Check current Workspace
+curl --location --request GET 'http://localhost:8082/askdata/workspace/current' \
 --header 'Authorization: Bearer 8faace67-e4f7-4bee-82dc-afeda2edc0ac' \
 --header 'Content-Type: application/json' \
 --data-raw ''
