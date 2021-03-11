@@ -75,10 +75,10 @@ You should get a response like
 }`
 
 ## Check current Workspace
-curl --location --request GET 'http://localhost:8082/askdata/workspace/current' \
+`curl --location --request GET 'http://localhost:8082/askdata/workspace/current' \
 --header 'Authorization: Bearer 8faace67-e4f7-4bee-82dc-afeda2edc0ac' \
 --header 'Content-Type: application/json' \
---data-raw ''
+--data-raw`
 
 `{
     "agent": {
