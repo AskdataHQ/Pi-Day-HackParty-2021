@@ -38,7 +38,7 @@ curl --location --request POST 'https://api.askdata.com/security/domain/askdata/
 :warning: **If you don't Askdata password or your regisrterd using Social login**: You must reset the password and request a new one!
 
 Response: <br />
-```json
+```yaml
 {
     "access_token": "{{token}}",
     "token_type": "bearer",
@@ -101,7 +101,7 @@ curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspa
 ```
 
 Response: <br />
-```json
+```yaml
 {
     "agent": {
         "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
@@ -146,7 +146,7 @@ curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/res
 ```
 
 Response (Sample): <br />
-```json
+```yaml
 {
     "id": null,
     "dataset": {
