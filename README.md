@@ -56,8 +56,8 @@ curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/worksp
 --header 'Authorization: {{token_type}} {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-	"agent_slug":"pi_day"
-}
+    "agent_slug": "pi_day"
+}'
 ```
 
 Response: <br />
