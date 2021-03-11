@@ -76,7 +76,7 @@ Response (Sample): <br />
 ## Check current Workspace
 Request: <br />
 `curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspace/current' \
---header 'Authorization: Bearer 8faace67-e4f7-4bee-82dc-afeda2edc0ac' \
+--header 'Authorization: Bearer {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw`
 
@@ -115,7 +115,7 @@ The referring workspace link is https://askdata.com/pi_day
 ## Ask data 
 Request: <br />
 `curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
---header 'authorization: Bearer 8faace67-e4f7-4bee-82dc-afeda2edc0ac' \
+--header 'authorization: Bearer {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'`
 
