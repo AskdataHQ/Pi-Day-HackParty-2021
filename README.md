@@ -25,6 +25,7 @@ After signing-up you will receive an email with the link for confirming your reg
 **User activated**![image](https://user-images.githubusercontent.com/74064313/110776912-d52e8880-8260-11eb-8475-7b136dc0bdf6.png)
 
 ## Login to Askdata using REST API (for getting token)
+Request: <br />
 `curl --location --request POST 'https://api.askdata.com/security/domain/askdata/oauth/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Authorization: Basic ZmVlZDpmZWVk' \
@@ -33,6 +34,15 @@ After signing-up you will receive an email with the link for confirming your reg
 --data-urlencode 'password={{yourpassword}}'`
 
 :warning: **If you don't Askdata password or your regisrterd using Social login**: You must reset the password and request a new one!
+
+Response: <br />
+`{
+    "access_token": "5e2d258f-f938-48aa-86ef-35d8ba5534d1",
+    "token_type": "bearer",
+    "refresh_token": "f39a6480-217d-4e24-83b1-6289d48db3aa",
+    "expires_in": 2629799,
+    "scope": "write openid read"
+}`
 
 ## Select Workspace "pi_day" 
 Use the API for switching workspace. Include your user token. <br />
@@ -45,7 +55,7 @@ Request: <br />
 	"agent_slug":"pi_day"
 }`
 
-Response (Sample): <br />
+Response: <br />
 `{
     "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
     "domain": "d45834e9-7642-4011-9869-f942faa79e9b",
@@ -119,7 +129,7 @@ Request: <br />
 --header 'Content-Type: application/json' \
 --data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'`
 
-Response: <br />
+Response (Sample): <br />
 `{
     "id": null,
     "dataset": {
