@@ -46,3 +46,20 @@ Use the API for switching workspace. Include your user token. <br />
 }`
 
 The referring workspace link is https://askdata.com/pi_day
+
+## Suggestions 
+`curl 'https://api.askdata.com/smartfeed/search?agentId=d53912d3-5d44-460a-8a38-abb200ede4f9&q=dec&types=QUERY,ENTITY&lang=en&browse=false' \
+  -H 'authority: api.askdata.com' \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'authorization: Bearer 74c1b5f4-012d-45c7-b6b3-1a3f604950da' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36' \
+  -H 'content-type: application/json' \
+  -H 'origin: https://askdata.com' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://askdata.com/' \
+  -H 'accept-language: it-IT,it;q=0.9,en-US;q=0.8,en;q=0.7' \
+  --compressed`
+  
+  
