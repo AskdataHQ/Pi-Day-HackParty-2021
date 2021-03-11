@@ -34,7 +34,7 @@ After signing-up you will receive an email with the link for confirming your reg
 --data-urlencode 'username={{youremail}}' \
 --data-urlencode 'password={{yourpassword}}'`
 
-WARN : If you don't Askdata password or your regisrterd using Social login, you must reset the password and request a new one.
+:warning: **If you don't Askdata password or your regisrterd using Social login**: You must reset the password and request a new one!
 
 ## Select Workspace "pi_day" 
 Use the API for switching workspace. Include your user token. <br />
@@ -43,6 +43,34 @@ Use the API for switching workspace. Include your user token. <br />
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"agent_id":"d53912d3-5d44-460a-8a38-abb200ede4f9"
+}`
+
+You should get a response like
+`{
+    "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
+    "domain": "d45834e9-7642-4011-9869-f942faa79e9b",
+    "label": "pi day",
+    "description": "Workspace for Pi Day HackParty 2021",
+    "icon": "https://askdata-prod.s3.amazonaws.com/agent/pi_campus.jpg",
+    "count": 0,
+    "language": "en",
+    "time": 1615453633400,
+    "datasets": [
+        {
+            "id": "d3976c00-0763-4494-9ac1-140b8f8ae586-MYSQL-f97e5f82-4ed3-440d-b842-590b6e7c2f48",
+            "type": "MYSQL"
+        },
+        {
+            "id": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
+            "type": "MYSQL"
+        },
+        {
+            "id": "f5f552d5-89a1-4f64-bb86-ed03d0d322f3-MYSQL-1f8980f4-a58f-4a14-a9ad-b424a9283faf",
+            "type": "MYSQL"
+        }
+    ],
+    "accessLevel": "READER",
+    "slug": "pi_day"
 }`
 
 The referring workspace link is https://askdata.com/pi_day
