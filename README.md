@@ -37,9 +37,9 @@ Request: <br />
 
 Response: <br />
 `{
-    "access_token": "5e2d258f-f938-48aa-86ef-35d8ba5534d1",
-    "token_type": "bearer",
-    "refresh_token": "f39a6480-217d-4e24-83b1-6289d48db3aa",
+    "access_token": "{{token}}",
+    "token_type": "{{token_type}}",
+    "refresh_token": "xxxxx",
     "expires_in": 2629799,
     "scope": "write openid read"
 }`
@@ -49,7 +49,7 @@ Use the API for switching workspace. Include your user token. <br />
 Request: <br />
 
 `curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/workspace/switch' \
---header 'Authorization: Bearer {{token}}' \
+--header 'Authorization: {{token_type}} {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"agent_slug":"pi_day"
@@ -86,7 +86,7 @@ Response: <br />
 ## Check current Workspace
 Request: <br />
 `curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspace/current' \
---header 'Authorization: Bearer {{token}}' \
+--header 'Authorization: {{token_type}} {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw`
 
@@ -125,7 +125,7 @@ The referring workspace link is https://askdata.com/pi_day
 ## Ask data 
 Request: <br />
 `curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
---header 'authorization: Bearer {{token}}' \
+--header 'authorization: {{token_type}} {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'`
 
