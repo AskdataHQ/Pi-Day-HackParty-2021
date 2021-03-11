@@ -61,7 +61,7 @@ curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/worksp
 ```
 
 Response: <br />
-```json
+```yaml
 {
     "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
     "domain": "d45834e9-7642-4011-9869-f942faa79e9b",
@@ -91,6 +91,7 @@ Response: <br />
 ```
 
 ## Check current Workspace
+Use this api for checking the correctness of the workspace. Include your user token.
 Request: <br />
 ```bash
 curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspace/current' \
@@ -134,6 +135,8 @@ Response: <br />
 The referring workspace link is https://askdata.com/pi_day
   
 ## Ask data 
+Use this api for getting data. **nl** is the parameter for sending the message; **language** is the language for sending the request. Available languages are **it** and **en**. Include your user token.
+
 Request: <br />
 ```bash
 curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
