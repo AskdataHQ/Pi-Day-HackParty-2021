@@ -26,12 +26,14 @@ After signing-up you will receive an email with the link for confirming your reg
 
 ## Login to Askdata using REST API (for getting token)
 Request: <br />
-`curl --location --request POST 'https://api.askdata.com/security/domain/askdata/oauth/token' \
+```bash
+curl --location --request POST 'https://api.askdata.com/security/domain/askdata/oauth/token' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --header 'Authorization: Basic ZmVlZDpmZWVk' \
 --data-urlencode 'grant_type=password' \
 --data-urlencode 'username={{youremail}}' \
---data-urlencode 'password={{yourpassword}}'`
+--data-urlencode 'password={{yourpassword}}'
+```
 
 :warning: **If you don't Askdata password or your regisrterd using Social login**: You must reset the password and request a new one!
 
@@ -49,13 +51,14 @@ Response: <br />
 ## Select Workspace "pi_day" 
 Use the API for switching workspace. Include your user token. <br />
 Request: <br />
-
-`curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/workspace/switch' \
+```bash
+curl --location --request POST 'https://api.askdata.com/smartfeed/askdata/workspace/switch' \
 --header 'Authorization: {{token_type}} {{token}}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"agent_slug":"pi_day"
-}`
+}
+```
 
 Response: <br />
 ```json
@@ -89,10 +92,12 @@ Response: <br />
 
 ## Check current Workspace
 Request: <br />
-`curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspace/current' \
+```bash
+curl --location --request GET 'https://api.askdata.com/smartfeed/askdata/workspace/current' \
 --header 'Authorization: {{token_type}} {{token}}' \
 --header 'Content-Type: application/json' \
---data-raw`
+--data-raw
+```
 
 Response: <br />
 ```json
@@ -130,10 +135,12 @@ The referring workspace link is https://askdata.com/pi_day
   
 ## Ask data 
 Request: <br />
-`curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
+```bash
+curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
 --header 'authorization: {{token_type}} {{token}}' \
 --header 'Content-Type: application/json' \
---data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'`
+--data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'
+```
 
 Response (Sample): <br />
 ```json
