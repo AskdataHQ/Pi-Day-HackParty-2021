@@ -14,11 +14,10 @@ Follows the steps for start using Askdata.
 * **Ask data:** Use Natural language queries for getting data.
 
 
-## SignUp / Social Login 
+## SignUp
 Register to [Askdata](https://app.askdata.com/login) with your own email or signing-in with Google.
 
 **Landing page**![image](https://user-images.githubusercontent.com/74064313/110775123-d959a680-825e-11eb-94ba-ab2173b07f02.png)
-
 
 **Signup with mail**![image](https://user-images.githubusercontent.com/74064313/110775513-4705d280-825f-11eb-892b-576dde234455.png)
 After signing-up you will receive an email with the link for confirming your registration. 
