@@ -36,13 +36,15 @@ Request: <br />
 :warning: **If you don't Askdata password or your regisrterd using Social login**: You must reset the password and request a new one!
 
 Response: <br />
-`{
+```json
+{
     "access_token": "{{token}}",
     "token_type": "{{token_type}}",
     "refresh_token": "xxxxx",
     "expires_in": 2629799,
     "scope": "write openid read"
-}`
+}
+```
 
 ## Select Workspace "pi_day" 
 Use the API for switching workspace. Include your user token. <br />
@@ -56,7 +58,8 @@ Request: <br />
 }`
 
 Response: <br />
-`{
+```json
+{
     "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
     "domain": "d45834e9-7642-4011-9869-f942faa79e9b",
     "label": "pi day",
@@ -81,7 +84,8 @@ Response: <br />
     ],
     "accessLevel": "READER",
     "slug": "pi_day"
-}`
+}
+```
 
 ## Check current Workspace
 Request: <br />
@@ -91,7 +95,8 @@ Request: <br />
 --data-raw`
 
 Response: <br />
-`{
+```json
+{
     "agent": {
         "id": "d53912d3-5d44-460a-8a38-abb200ede4f9",
         "domain": "d45834e9-7642-4011-9869-f942faa79e9b",
@@ -118,7 +123,8 @@ Response: <br />
         "accessLevel": "READER",
         "slug": "pi_day"
     }
-}`
+}
+```
 
 The referring workspace link is https://askdata.com/pi_day
   
@@ -130,7 +136,8 @@ Request: <br />
 --data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'`
 
 Response (Sample): <br />
-`{
+```json
+{
     "id": null,
     "dataset": {
         "id": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
@@ -436,3 +443,4 @@ Response (Sample): <br />
     "totalRecords": 21,
     "queryId": "q1"
 }
+```
