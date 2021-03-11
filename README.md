@@ -114,22 +114,316 @@ Response: <br />
 The referring workspace link is https://askdata.com/pi_day
   
 ## Ask data 
+Request: <br />
 `curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
---header 'authority: api-dev.askdata.com' \
---header 'sec-ch-ua: "Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"' \
---header 'accept: application/json, text/plain, */*' \
---header 'dnt: 1' \
 --header 'authorization: Bearer 8faace67-e4f7-4bee-82dc-afeda2edc0ac' \
---header 'sec-ch-ua-mobile: ?0' \
---header 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Safari/537.36' \
---header 'origin: http://localhost:4200' \
---header 'sec-fetch-site: cross-site' \
---header 'sec-fetch-mode: cors' \
---header 'sec-fetch-dest: empty' \
---header 'referer: http://localhost:4200/' \
---header 'accept-language: en-US,en;q=0.9,ro-RO;q=0.8,ro;q=0.7' \
 --header 'Content-Type: application/json' \
---header 'Cookie: JSESSIONID=9E206CE303071A4B3C86BA7E7873009B' \
 --data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'`
 
-  
+Response: <br />
+`{
+    "id": null,
+    "dataset": {
+        "id": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
+        "name": "Dati regionali",
+        "icon": "https://askdata-prod.s3.amazonaws.com/dataset/d_ProtezioneCivile%20%281%29.png"
+    },
+    "connection": "",
+    "executedSQLQuery": "SELECT `denominazione_regione`, SUM(`variazione_dimessi_guariti`) AS `variazione_dimessi_guariti` FROM `innaas-dev`.covid_it_regione WHERE `data` = '2021-03-11T17:00:00' GROUP BY `denominazione_regione` ORDER BY `variazione_dimessi_guariti` DESC",
+    "schema": [
+        {
+            "id": "a87aa80c-fe00-422e-94fd-043056a13dce-ENTITY_TYPE-DENOMINAZIONE_REGIONE",
+            "dataset": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
+            "type": "ENTITY_TYPE",
+            "code": "DENOMINAZIONE_REGIONE",
+            "name": "Denominazione regione",
+            "aggregation": "",
+            "icon": null,
+            "format": "",
+            "locale": "",
+            "dataType": "text",
+            "internalDataType": "STRING",
+            "measurementUnit": null,
+            "searchable": false,
+            "measure": false,
+            "dimension": true
+        },
+        {
+            "id": "a87aa80c-fe00-422e-94fd-043056a13dce-MEASURE-VARIAZIONE_DIMESSI_GUARITI",
+            "dataset": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
+            "type": "MEASURE",
+            "code": "VARIAZIONE_DIMESSI_GUARITI",
+            "name": "Variazione dimessi guariti",
+            "aggregation": "SUM",
+            "icon": null,
+            "format": "###,##0",
+            "locale": "en",
+            "dataType": "bigint",
+            "internalDataType": "NUMERIC",
+            "measurementUnit": null,
+            "searchable": false,
+            "measure": true,
+            "dimension": false
+        }
+    ],
+    "data": [
+        {
+            "cells": [
+                {
+                    "rawValue": "Lombardia",
+                    "value": "Lombardia"
+                },
+                {
+                    "rawValue": "2,167",
+                    "value": "2,167"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Campania",
+                    "value": "Campania"
+                },
+                {
+                    "rawValue": "1,674",
+                    "value": "1,674"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Emilia-Romagna",
+                    "value": "Emilia Romagna"
+                },
+                {
+                    "rawValue": "1,558",
+                    "value": "1,558"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Lazio",
+                    "value": "Lazio"
+                },
+                {
+                    "rawValue": "1,322",
+                    "value": "1,322"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Puglia",
+                    "value": "Puglia"
+                },
+                {
+                    "rawValue": "1,226",
+                    "value": "1,226"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Piemonte",
+                    "value": "Piemonte"
+                },
+                {
+                    "rawValue": "952",
+                    "value": "952"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Abruzzo",
+                    "value": "Abruzzo"
+                },
+                {
+                    "rawValue": "906",
+                    "value": "906"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Toscana",
+                    "value": "Toscana"
+                },
+                {
+                    "rawValue": "882",
+                    "value": "882"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Sicilia",
+                    "value": "Sicilia"
+                },
+                {
+                    "rawValue": "813",
+                    "value": "813"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Veneto",
+                    "value": "Veneto"
+                },
+                {
+                    "rawValue": "769",
+                    "value": "769"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Marche",
+                    "value": "Marche"
+                },
+                {
+                    "rawValue": "724",
+                    "value": "724"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Friuli Venezia Giulia",
+                    "value": "Friuli Venezia Giulia"
+                },
+                {
+                    "rawValue": "472",
+                    "value": "472"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Liguria",
+                    "value": "Liguria"
+                },
+                {
+                    "rawValue": "355",
+                    "value": "355"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Umbria",
+                    "value": "Umbria"
+                },
+                {
+                    "rawValue": "322",
+                    "value": "322"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "P.A. Bolzano",
+                    "value": "P.A. Bolzano"
+                },
+                {
+                    "rawValue": "285",
+                    "value": "285"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "P.A. Trento",
+                    "value": "P.A. Trento"
+                },
+                {
+                    "rawValue": "252",
+                    "value": "252"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Molise",
+                    "value": "Molise"
+                },
+                {
+                    "rawValue": "102",
+                    "value": "102"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Calabria",
+                    "value": "Calabria"
+                },
+                {
+                    "rawValue": "92",
+                    "value": "92"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Basilicata",
+                    "value": "Basilicata"
+                },
+                {
+                    "rawValue": "73",
+                    "value": "73"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Sardegna",
+                    "value": "Sardegna"
+                },
+                {
+                    "rawValue": "43",
+                    "value": "43"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Valle d'Aosta",
+                    "value": "Valle d'Aosta"
+                },
+                {
+                    "rawValue": "11",
+                    "value": "11"
+                }
+            ]
+        }
+    ],
+    "filters": null,
+    "sortedBy": null,
+    "page": 0,
+    "limit": 1000,
+    "totalRecords": 21,
+    "queryId": "q1"
+}
