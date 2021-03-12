@@ -455,7 +455,7 @@ Response (Sample): <br />
 
 ## HINT: Sample queries
 - Total cases by state
-- Total cases by county
+- Total cases by county // you'll get also the lat and long data for being used in maps
 - Total deaths by country as map
 - Total Deaths
 - Total Deaths split by months
