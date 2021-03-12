@@ -452,17 +452,12 @@ Response (Sample): <br />
     "queryId": "q1"
 }
 ```
-## Sample queries
 
- - Nuovi positivi per regione 
- - Ingressi in terapia intensiva per regione
- - Variazione dimessi per regione
- - Nuovi positivi su tamponi fatti per regione
- - Persone in isolamento domiciliare
- - Tamponi molecolari eseguiti per regione 
- - Indice di contagiosità per regione
- - Nuovi popositivi su casi testati 
- - Total cases by county 
- - Total cases by state 
- - Total deaths by country as map
+## HINT: Sample queries
+- Total cases by state
+- Total cases by county
+- Total deaths by country as map
+- Total Deaths
+- Total Deaths split by months
+- Total Deaths february 2021");
 
