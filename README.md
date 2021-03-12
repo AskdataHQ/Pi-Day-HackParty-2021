@@ -140,7 +140,7 @@ Request: <br />
 curl --location --request POST 'https://api.askdata.com/smartinsight/data/nl/result' \
 --header 'authorization: Bearer {{token}}' \
 --header 'Content-Type: application/json' \
---data-raw ' {"nl":"dimessi guariti denominazione regione","language":"en"}'
+--data-raw ' {"nl":"Total cases by state","language":"en"}'
 ```
 
 Response (Sample): <br />
@@ -148,19 +148,19 @@ Response (Sample): <br />
 {
     "id": null,
     "dataset": {
-        "id": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
-        "name": "Dati regionali",
-        "icon": "https://askdata-prod.s3.amazonaws.com/dataset/d_ProtezioneCivile%20%281%29.png"
+        "id": "d3976c00-0763-4494-9ac1-140b8f8ae586-MYSQL-f97e5f82-4ed3-440d-b842-590b6e7c2f48",
+        "name": "Covid-19 US Counties",
+        "icon": "https://askdata-prod.s3.amazonaws.com/dataset/gjkVMelR_400x400.png"
     },
     "connection": "",
-    "executedSQLQuery": "SELECT `denominazione_regione`, SUM(`variazione_dimessi_guariti`) AS `variazione_dimessi_guariti` FROM `innaas-dev`.covid_it_regione WHERE `data` = '2021-03-11T17:00:00' GROUP BY `denominazione_regione` ORDER BY `variazione_dimessi_guariti` DESC",
+    "executedSQLQuery": "SELECT `state`, SUM(`cases`) AS `cases` FROM `innaas-dev`.covid_us_counties WHERE `date` = '2021-03-10' GROUP BY `state` ORDER BY `cases` DESC",
     "schema": [
         {
-            "id": "a87aa80c-fe00-422e-94fd-043056a13dce-ENTITY_TYPE-DENOMINAZIONE_REGIONE",
-            "dataset": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
+            "id": "d3976c00-0763-4494-9ac1-140b8f8ae586-ENTITY_TYPE-STATE",
+            "dataset": "d3976c00-0763-4494-9ac1-140b8f8ae586-MYSQL-f97e5f82-4ed3-440d-b842-590b6e7c2f48",
             "type": "ENTITY_TYPE",
-            "code": "DENOMINAZIONE_REGIONE",
-            "name": "Denominazione regione",
+            "code": "STATE",
+            "name": "State",
             "aggregation": "",
             "icon": null,
             "format": "",
@@ -168,16 +168,16 @@ Response (Sample): <br />
             "dataType": "text",
             "internalDataType": "STRING",
             "measurementUnit": null,
-            "searchable": false,
+            "searchable": true,
             "measure": false,
             "dimension": true
         },
         {
-            "id": "a87aa80c-fe00-422e-94fd-043056a13dce-MEASURE-VARIAZIONE_DIMESSI_GUARITI",
-            "dataset": "a87aa80c-fe00-422e-94fd-043056a13dce-MYSQL-4c9f03f2-6d3d-404b-9515-d8a937526069",
+            "id": "d3976c00-0763-4494-9ac1-140b8f8ae586-MEASURE-CASES",
+            "dataset": "d3976c00-0763-4494-9ac1-140b8f8ae586-MYSQL-f97e5f82-4ed3-440d-b842-590b6e7c2f48",
             "type": "MEASURE",
-            "code": "VARIAZIONE_DIMESSI_GUARITI",
-            "name": "Variazione dimessi guariti",
+            "code": "CASES",
+            "name": "Total Cases",
             "aggregation": "SUM",
             "icon": null,
             "format": "###,##0",
@@ -194,252 +194,660 @@ Response (Sample): <br />
         {
             "cells": [
                 {
-                    "rawValue": "Lombardia",
-                    "value": "Lombardia"
+                    "rawValue": "California",
+                    "value": "California"
                 },
                 {
-                    "rawValue": "2,167",
-                    "value": "2,167"
+                    "rawValue": "3,611,008",
+                    "value": "3,611,008"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Campania",
-                    "value": "Campania"
+                    "rawValue": "Texas",
+                    "value": "Texas"
                 },
                 {
-                    "rawValue": "1,674",
-                    "value": "1,674"
+                    "rawValue": "2,710,622",
+                    "value": "2,710,622"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Emilia-Romagna",
-                    "value": "Emilia Romagna"
+                    "rawValue": "Florida",
+                    "value": "Florida"
                 },
                 {
-                    "rawValue": "1,558",
-                    "value": "1,558"
+                    "rawValue": "1,957,578",
+                    "value": "1,957,578"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Lazio",
-                    "value": "Lazio"
+                    "rawValue": "New York",
+                    "value": "New York"
                 },
                 {
-                    "rawValue": "1,322",
-                    "value": "1,322"
+                    "rawValue": "1,713,287",
+                    "value": "1,713,287"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Puglia",
-                    "value": "Puglia"
+                    "rawValue": "Illinois",
+                    "value": "Illinois"
                 },
                 {
-                    "rawValue": "1,226",
-                    "value": "1,226"
+                    "rawValue": "1,206,362",
+                    "value": "1,206,362"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Piemonte",
-                    "value": "Piemonte"
+                    "rawValue": "Georgia",
+                    "value": "Georgia"
                 },
                 {
-                    "rawValue": "952",
-                    "value": "952"
+                    "rawValue": "1,003,181",
+                    "value": "1,003,181"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Abruzzo",
-                    "value": "Abruzzo"
+                    "rawValue": "Ohio",
+                    "value": "Ohio"
                 },
                 {
-                    "rawValue": "906",
-                    "value": "906"
+                    "rawValue": "983,487",
+                    "value": "983,487"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Toscana",
-                    "value": "Toscana"
+                    "rawValue": "Pennsylvania",
+                    "value": "Pennsylvania"
                 },
                 {
-                    "rawValue": "882",
-                    "value": "882"
+                    "rawValue": "960,877",
+                    "value": "960,877"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Sicilia",
-                    "value": "Sicilia"
+                    "rawValue": "North Carolina",
+                    "value": "North Carolina"
                 },
                 {
-                    "rawValue": "813",
-                    "value": "813"
+                    "rawValue": "882,489",
+                    "value": "882,489"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Veneto",
-                    "value": "Veneto"
+                    "rawValue": "Arizona",
+                    "value": "Arizona"
                 },
                 {
-                    "rawValue": "769",
-                    "value": "769"
+                    "rawValue": "828,630",
+                    "value": "828,630"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Marche",
-                    "value": "Marche"
+                    "rawValue": "New Jersey",
+                    "value": "New Jersey"
                 },
                 {
-                    "rawValue": "724",
-                    "value": "724"
+                    "rawValue": "822,817",
+                    "value": "822,817"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Friuli Venezia Giulia",
-                    "value": "Friuli Venezia Giulia"
+                    "rawValue": "Tennessee",
+                    "value": "Tennessee"
                 },
                 {
-                    "rawValue": "472",
-                    "value": "472"
+                    "rawValue": "772,634",
+                    "value": "772,634"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Liguria",
-                    "value": "Liguria"
+                    "rawValue": "Indiana",
+                    "value": "Indiana"
                 },
                 {
-                    "rawValue": "355",
-                    "value": "355"
+                    "rawValue": "672,439",
+                    "value": "672,439"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Umbria",
-                    "value": "Umbria"
+                    "rawValue": "Michigan",
+                    "value": "Michigan"
                 },
                 {
-                    "rawValue": "322",
-                    "value": "322"
+                    "rawValue": "662,553",
+                    "value": "662,553"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "P.A. Bolzano",
-                    "value": "P.A. Bolzano"
+                    "rawValue": "Wisconsin",
+                    "value": "Wisconsin"
                 },
                 {
-                    "rawValue": "285",
-                    "value": "285"
+                    "rawValue": "623,150",
+                    "value": "623,150"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "P.A. Trento",
-                    "value": "P.A. Trento"
+                    "rawValue": "Massachusetts",
+                    "value": "Massachusetts"
                 },
                 {
-                    "rawValue": "252",
-                    "value": "252"
+                    "rawValue": "595,264",
+                    "value": "595,264"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Molise",
-                    "value": "Molise"
+                    "rawValue": "Virginia",
+                    "value": "Virginia"
                 },
                 {
-                    "rawValue": "102",
-                    "value": "102"
+                    "rawValue": "589,375",
+                    "value": "589,375"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Calabria",
-                    "value": "Calabria"
+                    "rawValue": "Missouri",
+                    "value": "Missouri"
                 },
                 {
-                    "rawValue": "92",
-                    "value": "92"
+                    "rawValue": "572,148",
+                    "value": "572,148"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Basilicata",
-                    "value": "Basilicata"
+                    "rawValue": "South Carolina",
+                    "value": "South Carolina"
                 },
                 {
-                    "rawValue": "73",
-                    "value": "73"
+                    "rawValue": "528,473",
+                    "value": "528,473"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Sardegna",
-                    "value": "Sardegna"
+                    "rawValue": "Alabama",
+                    "value": "Alabama"
                 },
                 {
-                    "rawValue": "43",
-                    "value": "43"
+                    "rawValue": "501,398",
+                    "value": "501,398"
                 }
             ]
         },
         {
             "cells": [
                 {
-                    "rawValue": "Valle d'Aosta",
-                    "value": "Valle d'Aosta"
+                    "rawValue": "Minnesota",
+                    "value": "Minnesota"
                 },
                 {
-                    "rawValue": "11",
-                    "value": "11"
+                    "rawValue": "493,081",
+                    "value": "493,081"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Colorado",
+                    "value": "Colorado"
+                },
+                {
+                    "rawValue": "441,611",
+                    "value": "441,611"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Louisiana",
+                    "value": "Louisiana"
+                },
+                {
+                    "rawValue": "435,514",
+                    "value": "435,514"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Oklahoma",
+                    "value": "Oklahoma"
+                },
+                {
+                    "rawValue": "430,250",
+                    "value": "430,250"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Kentucky",
+                    "value": "Kentucky"
+                },
+                {
+                    "rawValue": "416,402",
+                    "value": "416,402"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Maryland",
+                    "value": "Maryland"
+                },
+                {
+                    "rawValue": "389,748",
+                    "value": "389,748"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Utah",
+                    "value": "Utah"
+                },
+                {
+                    "rawValue": "376,327",
+                    "value": "376,327"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Washington",
+                    "value": "Washington"
+                },
+                {
+                    "rawValue": "349,881",
+                    "value": "349,881"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Iowa",
+                    "value": "Iowa"
+                },
+                {
+                    "rawValue": "341,378",
+                    "value": "341,378"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Arkansas",
+                    "value": "Arkansas"
+                },
+                {
+                    "rawValue": "325,700",
+                    "value": "325,700"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Kansas",
+                    "value": "Kansas"
+                },
+                {
+                    "rawValue": "300,261",
+                    "value": "300,261"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Mississippi",
+                    "value": "Mississippi"
+                },
+                {
+                    "rawValue": "298,445",
+                    "value": "298,445"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Nevada",
+                    "value": "Nevada"
+                },
+                {
+                    "rawValue": "297,216",
+                    "value": "297,216"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Connecticut",
+                    "value": "Connecticut"
+                },
+                {
+                    "rawValue": "288,657",
+                    "value": "288,657"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Nebraska",
+                    "value": "Nebraska"
+                },
+                {
+                    "rawValue": "204,144",
+                    "value": "204,144"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "New Mexico",
+                    "value": "New Mexico"
+                },
+                {
+                    "rawValue": "187,487",
+                    "value": "187,487"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Idaho",
+                    "value": "Idaho"
+                },
+                {
+                    "rawValue": "174,381",
+                    "value": "174,381"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Oregon",
+                    "value": "Oregon"
+                },
+                {
+                    "rawValue": "158,360",
+                    "value": "158,360"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Puerto Rico",
+                    "value": "Puerto Rico"
+                },
+                {
+                    "rawValue": "135,666",
+                    "value": "135,666"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "West Virginia",
+                    "value": "West Virginia"
+                },
+                {
+                    "rawValue": "134,158",
+                    "value": "134,158"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Rhode Island",
+                    "value": "Rhode Island"
+                },
+                {
+                    "rawValue": "129,595",
+                    "value": "129,595"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "South Dakota",
+                    "value": "South Dakota"
+                },
+                {
+                    "rawValue": "113,962",
+                    "value": "113,962"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Montana",
+                    "value": "Montana"
+                },
+                {
+                    "rawValue": "101,374",
+                    "value": "101,374"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "North Dakota",
+                    "value": "North Dakota"
+                },
+                {
+                    "rawValue": "100,645",
+                    "value": "100,645"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Delaware",
+                    "value": "Delaware"
+                },
+                {
+                    "rawValue": "88,891",
+                    "value": "88,891"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "New Hampshire",
+                    "value": "New Hampshire"
+                },
+                {
+                    "rawValue": "77,463",
+                    "value": "77,463"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Alaska",
+                    "value": "Alaska"
+                },
+                {
+                    "rawValue": "59,451",
+                    "value": "59,451"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Wyoming",
+                    "value": "Wyoming"
+                },
+                {
+                    "rawValue": "55,014",
+                    "value": "55,014"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Maine",
+                    "value": "Maine"
+                },
+                {
+                    "rawValue": "46,254",
+                    "value": "46,254"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "District of Columbia",
+                    "value": "District of Columbia"
+                },
+                {
+                    "rawValue": "42,006",
+                    "value": "42,006"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Hawaii",
+                    "value": "Hawaii"
+                },
+                {
+                    "rawValue": "27,944",
+                    "value": "27,944"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Vermont",
+                    "value": "Vermont"
+                },
+                {
+                    "rawValue": "16,371",
+                    "value": "16,371"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Guam",
+                    "value": "Guam"
+                },
+                {
+                    "rawValue": "8,725",
+                    "value": "8,725"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Virgin Islands",
+                    "value": "Virgin Islands"
+                },
+                {
+                    "rawValue": "2,755",
+                    "value": "2,755"
+                }
+            ]
+        },
+        {
+            "cells": [
+                {
+                    "rawValue": "Northern Mariana Islands",
+                    "value": "Northern Mariana Islands"
+                },
+                {
+                    "rawValue": "146",
+                    "value": "146"
                 }
             ]
         }
@@ -448,7 +856,7 @@ Response (Sample): <br />
     "sortedBy": null,
     "page": 0,
     "limit": 1000,
-    "totalRecords": 21,
+    "totalRecords": 55,
     "queryId": "q1"
 }
 ```
