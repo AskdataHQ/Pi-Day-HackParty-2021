@@ -459,5 +459,5 @@ Response (Sample): <br />
 - Total deaths by country as map
 - Total Deaths
 - Total Deaths split by months
-- Total Deaths february 2021;
+- Total Deaths february 2021
 
