@@ -12,7 +12,7 @@ Follows the steps for start using Askdata.
 * **3. Select Workspace:** Switch to the Pi Day workspace.
 * **4. Check current Workspace:** Check your workspace is the one provided for Pi Day 2021.
 * **5. How to ask data:** Use Natural language queries for getting data.
-* **HINT: Sample queries:**
+* **HINT: Sample queries**
 
 
 ## SignUp
