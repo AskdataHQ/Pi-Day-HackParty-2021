@@ -7,12 +7,12 @@ Follows the steps for start using Askdata.
 
 # Askdata quick start:
 
-* **SignUp:** Register to [Askdata](https://app.askdata.com/login) with your own email  ⚠️  Do not use the Social Login with Google/Slack.
-* **Login to Askdata using REST API:** Get the token that will be used for all the other APIs
-* **Select Workspace:** Switch to the Pi Day workspace.
-* **Check current Workspace:** Check your workspace is the one provided for Pi Day 2021.
-* **Ask data:** Use Natural language queries for getting data.
-* **Sample queries:** Explore datasets starting from some sample queries
+* **1. SignUp:** Register to [Askdata](https://app.askdata.com/login) with your own email  ⚠️  Do not use the Social Login with Google/Slack.
+* **2. Login to Askdata using REST API:** Get the token that will be used for all the other APIs
+* **3. Select Workspace:** Switch to the Pi Day workspace.
+* **4. Check current Workspace:** Check your workspace is the one provided for Pi Day 2021.
+* **5. How to ask data:** Use Natural language queries for getting data.
+* **HINT: Sample queries:**
 
 
 ## SignUp
